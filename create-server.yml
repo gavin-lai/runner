@@ -1,19 +1,19 @@
 ---
-- name: Create a Server
+- name: Create Server
         hosts: localhost
         gather_facts: False
         connection: local
         tasks:
-        - name: Deploy a new Ubuntu VM to Default Group
-            clc_server:
-            name: test
-            cpu: 1
-            memory: 1
-            description: 'linux'
-            location: CA2
-            template: ubuntu-14-64
-            count: 1
-            group: 'Gavin-Test'
-           register: clc
+        - name: Deploy a new Ubuntu VM
+                clc_server:
+                name: test
+                cpu: 1
+                memory: 1
+                description: 'linux'
+                location: CA2
+                template: ubuntu-14-64
+                count: 1
+                group: 'Gavin-Test'
+                register: clc
         - name: debug
-            debug: var=clc.server_ids
+                debug: var=clc.server_ids
