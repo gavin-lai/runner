@@ -11,6 +11,7 @@
                 memory: 1
                 description: 'linux'
                 location: CA2
+                network_id: 67939d52007445fab2d5b171513ef123
                 template: ubuntu-14-64
                 count: 1
                 group: 'Gavin-Test'
