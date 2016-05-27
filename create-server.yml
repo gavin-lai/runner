@@ -1,3 +1,4 @@
+---
 - name: Create a Server
         hosts: localhost
         gather_facts: False
@@ -8,7 +9,7 @@
             name: test
             cpu: 1
             memory: 1
-            description: 'SQL Server'
+            description: 'linux'
             location: CA2
             template: ubuntu-14-64
             count: 1
