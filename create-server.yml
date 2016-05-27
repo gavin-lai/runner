@@ -1,20 +1,20 @@
 ---
-- name: Create Server
-        hosts: localhost
-        gather_facts: False
-        connection: local
-        tasks:
-        - name: Deploy a new Ubuntu VM
-                clc_server:
-                name: test
-                cpu: 1
-                memory: 1
-                description: 'linux'
-                location: CA2
-                network_id: 67939d52007445fab2d5b171513ef123
-                template: ubuntu-14-64
-                count: 1
-                group: 'Gavin-Test'
-                register: clc
-        - name: debug
-                debug: var=clc.server_ids
+- name: Build linux Servers
+  hosts: localhost
+   gather_facts: false
+  connection: local
+  tasks:
+  - name: Deploy linux Servers
+    clc_server:
+      cpu: 1
+      memory: 1
+      description: 'Runner Ubuntu Server'
+      location: CA3
+      group: "Gavin-Test"
+      managed_os: false
+      name: test
+      network_id: 67939d52007445fab2d5b171513ef123
+      template: UBUNTU-14-64-TEMPLATE
+      count: 1
+    register: clc
+    
