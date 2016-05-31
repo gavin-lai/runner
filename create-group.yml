@@ -8,7 +8,7 @@
     - name: Create Web Server Group
       clc_group:
         name: "{{ web_server_group }}"
-        parent: 'CA2 Hardware'
+        parent: 'GavinTest'
         location: CA2
         state: present
       register: clc
