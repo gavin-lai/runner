@@ -1,0 +1,14 @@
+- name: Create Groups
+  hosts: localhost
+  vars:
+    dev_group: 'Dev Group'
+    gather_facts: False
+  connection: local
+  tasks:
+    - name: Create Web Server Group
+      clc_group:
+        name: "{{ web_server_group }}"
+        parent: 'CA2 Hardware'
+        location: CA2
+        state: present
+      register: clc
