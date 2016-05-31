@@ -1,13 +1,13 @@
 - name: Create Groups
   hosts: localhost
   vars:
-    dev_group: 'Dev Group'
+    dev_group: 'DevGroup'
     gather_facts: False
   connection: local
   tasks:
     - name: Create Web Server Group
       clc_group:
-        name: "{{ web_server_group }}"
+        name: "{{ dev_group }}"
         parent: 'GavinTest'
         location: CA2
         state: present
