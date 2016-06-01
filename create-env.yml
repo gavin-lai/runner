@@ -1,3 +1,4 @@
+---
 - name: Create Groups
   hosts: localhost
   vars:
@@ -14,7 +15,7 @@
       register: clc
 - name: Build Web Servers
   hosts: localhost
-  serial: 3
+  serial: (30%)
   vars:
     dev_group: 'DevGroup2'
   gather_facts: false
