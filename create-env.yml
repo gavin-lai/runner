@@ -3,10 +3,10 @@
   hosts: localhost
   vars:
     dev_group: 'DevGroup2'
-    gather_facts: False
+  gather_facts: False
   connection: local
   tasks:
-    - name: Create Web Server Group
+    - name: Create dev Server Group
       clc_group:
         name: "{{ dev_group }}"
         parent: 'GavinTest'
@@ -15,7 +15,6 @@
       register: clc
 - name: Build Servers
   hosts: localhost
-  serial: (30%)
   vars:
     dev_group: 'DevGroup2'
   gather_facts: false
