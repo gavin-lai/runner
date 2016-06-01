@@ -21,15 +21,15 @@
   connection: local
   tasks:
    - name: Deploy linux Servers
-    clc_server:
-      cpu: 1
-      memory: 1
-      description: 'Runner Ubuntu Server'
-      location: CA3
-      group: "{{ dev_group }}"
-      managed_os: false
-      name: test
-      network_id: 67939d52007445fab2d5b171513ef123
-      template: UBUNTU-14-64-TEMPLATE
-      count: 1
-    register: clc
+      clc_server:
+        cpu: 1
+        memory: 1
+        description: 'Runner Ubuntu Server'
+        location: CA3
+        group: "{{ dev_group }}"
+        managed_os: false
+        name: test
+        network_id: 67939d52007445fab2d5b171513ef123
+        template: UBUNTU-14-64-TEMPLATE
+        count: 1
+      register: clc
