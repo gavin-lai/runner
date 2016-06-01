@@ -30,7 +30,7 @@
         group: "{{ dev_group }}"
         managed_os: false
         name: test
-        network_id: 67939d52007445fab2d5b171513ef123
+        network_id: 606822678a2a4957bae5e46e7ca1bc75
         template: UBUNTU-14-64-TEMPLATE
         count: 1
       register: clc
