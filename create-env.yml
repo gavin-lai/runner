@@ -26,7 +26,7 @@
       memory: 1
       description: 'Runner Ubuntu Server'
       location: CA3
-      group: "Gavin-Test"
+      group: "{{ dev_group }}"
       managed_os: false
       name: test
       network_id: 67939d52007445fab2d5b171513ef123
