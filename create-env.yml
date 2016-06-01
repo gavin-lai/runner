@@ -1,1 +1,35 @@
-
+- name: Create Groups
+  hosts: localhost
+  vars:
+    dev_group: 'DevGroup2'
+    gather_facts: False
+  connection: local
+  tasks:
+    - name: Create Web Server Group
+      clc_group:
+        name: "{{ dev_group }}"
+        parent: 'GavinTest'
+        location: CA2
+        state: present
+      register: clc
+- name: Build Web Servers
+  hosts: localhost
+  serial: 3
+  vars:
+    dev_group: 'DevGroup2'
+  gather_facts: false
+  connection: local
+  tasks:
+   - name: Deploy linux Servers
+    clc_server:
+      cpu: 1
+      memory: 1
+      description: 'Runner Ubuntu Server'
+      location: CA3
+      group: "Gavin-Test"
+      managed_os: false
+      name: test
+      network_id: 67939d52007445fab2d5b171513ef123
+      template: UBUNTU-14-64-TEMPLATE
+      count: 1
+    register: clc
