@@ -13,7 +13,7 @@
         location: CA2
         state: present
       register: clc
-- name: Build Web Servers
+- name: Build Servers
   hosts: localhost
   serial: (30%)
   vars:
@@ -21,7 +21,7 @@
   gather_facts: false
   connection: local
   tasks:
-   - name: Deploy linux Servers
+   - name: Build linux Servers
       clc_server:
         cpu: 1
         memory: 1
