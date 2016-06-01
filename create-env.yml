@@ -25,7 +25,7 @@
         cpu: 1
         memory: 1
         description: 'Runner Ubuntu Server'
-        location: CA3
+        location: CA2
         group: "{{ dev_group }}"
         managed_os: false
         name: test
