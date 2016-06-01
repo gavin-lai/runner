@@ -24,7 +24,7 @@
       clc_server:
         cpu: 1
         memory: 1
-        description: 'Runner Ubuntu Server'
+        description: "Runner Ubuntu Server"
         location: CA2
         group: "{{ dev_group }}"
         managed_os: false
