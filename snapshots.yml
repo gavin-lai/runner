@@ -23,4 +23,4 @@
             - CA3CCVAOVPN01
         expiration_days: 1
         wait: True
-state: present
+        state: present
