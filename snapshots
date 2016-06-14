@@ -1,0 +1,26 @@
+---
+- name: Delete a snapshot on a set of servers
+  hosts: localhost
+  gather_facts: False
+  connection: local
+  tasks:
+    - name: Delete existing snapshots
+      clc_server_snapshot:
+        server_ids:
+            - CA3CCVA2TAKE02
+            - CA3CCVAOVPN01
+        wait: True
+        state: absent
+- name: Create a snapshot on a set of servers
+  hosts: localhost
+  gather_facts: False
+  connection: local
+  tasks:
+    - name: Create server snapshot
+      clc_server_snapshot:
+        server_ids:
+            - CA3CCVA2TAKE02
+            - CA3CCVAOVPN01
+        expiration_days: 1
+        wait: True
+state: present
