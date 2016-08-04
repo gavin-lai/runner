@@ -21,4 +21,4 @@
             - CA3CCVAO*
         expiration_days: 1
         wait: True
-  state: present
+        state: present
