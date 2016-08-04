@@ -7,7 +7,7 @@
     - name: Delete existing snapshots
       clc_server_snapshot:
         server_ids:
-            - CA3CCVAO*
+            - CA3CCVAO*1
         wait: True
         state: absent
 - name: Create a snapshot on a set of servers
@@ -18,7 +18,7 @@
     - name: Create server snapshot
       clc_server_snapshot:
         server_ids:
-            - CA3CCVAO*
+            - CA3CCVAO*1
         expiration_days: 1
         wait: True
         state: present
